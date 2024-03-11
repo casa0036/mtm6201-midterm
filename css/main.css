@@ -3,16 +3,25 @@
     font-family: "Rubik", sans-serif;
     font-size: 16px;
     color: #4F5665;
+    box-sizing: border-box;
+  }
+
+  *,
+  *::before, 
+  *::after {
+    box-sizing: inherit;
+  }
+
+  .clearfix::after {
+    /* content: '';
+    display: table;
+    clear: both; */
+    overflow: auto;
   }
 
   body {
-    margin: 0;
+    margin: 0 auto;
     line-height: 1.5;
-    padding: 1.5em
-  }
-
-  img {
-    width: 100%;
   }
 
   a a:link,
@@ -23,6 +32,10 @@
   a:hover,
   a:focus {
     color: #F53838;
+  }
+
+  .svg-icons {
+    width: 100%;
   }
 
   /* h1 {
@@ -53,6 +66,7 @@
   .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 1em;
   }
 
   .btn-sq {
@@ -61,6 +75,7 @@
     border: none;
     padding: 10px 35px 10px 35px;
     border-radius: 5px;
+    font-weight: bold;
   }
 
   .btn-round {
@@ -74,6 +89,11 @@
   .btn-round:hover {
     color: #fff ;
     background-color: #F53855;
+  }
+
+  .grey-bg {
+    background: linear-gradient(180deg, #F8F8F8 -45.04%, rgba(248, 248, 248, 0.00) 88.56%);
+    
   }
 
 
@@ -114,7 +134,6 @@
   }
 
   .icon img {
-    width: 10%;
     padding-right: 10px;
   }
 
@@ -127,12 +146,15 @@
 
   .hero-banner{
     text-align: center;
+    padding-top: 50px;
   }
 
   .hero-banner h1 {
     font-size: 35px;
     padding: 50px 10px 30px 10px;
     margin: 0;
+    color: #0B132A;
+    font-weight: 500;
   }
 
   .hero-banner p {
@@ -147,13 +169,18 @@
   /* Aside styling */
 
   .numbers-main {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-top: 30px ;
+    text-align: center;
+    padding-top: 30px;
   }
-  .numbers h3 {
+
+  .numbers-img {
+    padding-top: 30px;
+    width: 20%;
+  }
+
+  .numbers {
     font-size: 16px;
+    margin: 0;
   }
 
   .numbers h3, 
@@ -164,8 +191,11 @@
 
   /* Features styling */
 
+  .features {
+    padding-top: 50px;
+  }
+
   .features li img {
-    width: 8%;
     padding-right: 9px;
   }
 
@@ -181,6 +211,7 @@
   .features h2,
   .features p {
     margin: 0;
+    text-align: center;
   }
 
   .features ul{
@@ -202,14 +233,6 @@
   .plan p,
   .plan h3 {
     margin: 0;
-  }
-
-  .plan img {
-    width: 50%;
-  }
-
-  .plan li img {
-    width: 12%;
   }
 
   /* plan card style */
@@ -301,17 +324,14 @@
     margin-bottom: 10px;
   }
 
-  .user-img {
-    width: 30%;
-  }
-
   .review-card h4 {
     color: #0B132A;
     margin: 0;
   }
 
   .fa-solid {
-    font-size: 50px;
+    font-size: 30px;
+    padding: 9px 9px 9px 9px ;
     color: #F53838;
     background-color: #FFF;
     border: 2px #F53855 solid;
@@ -333,10 +353,6 @@
     width: 10%;
   }
 
-
-
-
-
   /* suscribe section */
 
   .suscribe {
@@ -348,7 +364,6 @@
     font-size: 25px;
   }
 
-
   /* footer styling */
 
   .foot {
@@ -356,6 +371,7 @@
     padding-top: 45px;
     background-color: #F8F8F8;
   }
+
   .foot p:nth-child(2) {
     padding: 15px;
   }
@@ -365,7 +381,7 @@
   }
 
   .social {
-    display: flex;
+    display: inline-flex;
   }
 
   .foot ul {
@@ -386,6 +402,11 @@
 /* desktop styling */
 
 @media screen and (min-width:1024px) {
+
+  .btn-sq {
+    width: 250px;
+    height: 50px;
+  }
 
   /* nav bar styling */
   .nav-bar {
@@ -409,25 +430,258 @@
   }
 
   .sign-up-link {
-    padding: 50px;
+    /* padding: 50px; */
   }
 
   /* hero banner styling */
 
+  .hero-banner {
+    display: flex;
+    padding-top: 35px;
+    padding-bottom: 80px;
+    text-align: justify;
+    align-items: center;
+  }
+
   .hero-banner h1 {
     font-size: 50px;
     color: #0B132A;
+    padding: 0 42px 30px 0;
   }
 
-  .hero-banner {
+  .hero-banner p {
+    padding-right: 42px;
+    margin-bottom: 30px;
+  }
+
+  /* Numbers styling */
+
+  .numbers-main {
     display: flex;
-    padding-top: 100px;
-    padding-bottom: 80px;
-  }
-
-  .hero-text {
+    justify-content: space-evenly;
     padding: 50px;
   }
+
+  .number-block {
+    display: flex;
+    align-items: center;
+    padding: 12px 71px 12px 71px;
+  }
+
+  .text-block {
+    margin-left: 20px;
+    text-align: justify;
+  }
+
+  .text-block h3 {
+    font-size: 25px;
+  }
+
+  .mid-lines {
+    border-left: 2px #EEEFF2 solid;
+    border-right: 2px #EEEFF2 solid;
+  }
+
+  .numbers-img {
+    padding-top: 0;
+    width: 55px;
+    height: 55px;
+  }
+
+  /* feature styles */
+  
+  .features {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+  }
+
+  .features-text h2,
+  .features p {
+    text-align: justify;
+  }
+
+  .features h2 {
+    font-size: 35px;
+    color: #0B132A;
+  }
+
+  .features-text {
+    padding-left: 200px;
+  }
+
+  .features-text li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /*  plan section styling */
+
+  .plan h2 {
+    font-size: 35px;
+    color: #0B132A;
+    padding-bottom: 25px;
+  }
+
+  .plan-text {
+    padding-bottom: 70px;
+  }
+
+  .card-price {
+    padding-bottom: 0;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    align-items: stretch;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .card h3 {
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+
+  .card li {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .card-price {
+    padding-top: 40px;
+    
+  }
+
+  /* vpn styling */
+
+  .vpn h2 {
+    color: #0B132A;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .vpn p {
+    padding-bottom: 100px;
+  }
+
+/* Svg-syling logos */
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 20px;
+}
+
+/* Customer review styling */
+
+.reviews h2 {
+  color: #0B132A;
+  text-align: center;
+  font-size: 35px;
+  padding-top: 100px;
+  padding-bottom: 10px;
+}
+
+.reviews p {
+  padding-bottom: 50px;
+}
+/* card styling */
+
+.review-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 20px;
+  text-align: justify;
+}
+
+.review-card {
+display: flex;
+flex-wrap: wrap;
+}
+
+.small-body {
+align-self: left;
+}
+
+.card-name {
+  padding-left: 15px;
+}
+
+.rating {
+  padding-left: 80px;
+}
+
+.star {
+  width: 40%;
+}
+
+.arrows {
+  text-align: right;
+  padding-top: 25px;
+}
+
+.fa-solid {
+  font-size: 25px;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  width: 50px;
+  height: 50px;
+}
+
+/* suscribe styling */
+
+.suscribe {
+  margin-left: 80px;
+  margin-right: 80px;
+  text-align: justify;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 45px;
+
+}
+
+.suscribe h2 {
+  color: #0B132A;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+/* footer styling */
+
+.foot {
+  text-align: justify;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon {
+  padding-bottom: 20px;
+}
+
+.icon p {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
 
 }
 
