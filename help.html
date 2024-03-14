@@ -18,13 +18,19 @@
 
 <body>
     <!--Adds all content in container-->
-    <div class="container">
-        <header>
-            <nav>
+    <div class="container" id="top">
+        <!-- Skip links -->
+        <ul class="skip-links">
+            <li><a href="#nav">Skip to main nav</a></li>
+            <li><a href="#main">Skip to main content</a></li>
+          </ul>
+        <header role="banner">
+            <!-- Navigation -->
+            <nav id="nav" role="navigation">
                 <div class="nav-bar">
                     <div class="icon">
                         <!-- creating a class for icon to style -->
-                        <a href="/mtm6201-midterm/about.html"><p><img src="images/logo.svg" alt="">Lasles<strong>VPN</strong></p></a>
+                        <a href="/mtm6201-midterm/index.html" aria-label="Homepage"><p><img src="images/logo.svg" alt="LaslesVPN logo">Lasles<strong>VPN</strong></p></a>
                     </div>
                     <ul>
                         <li><a href="/mtm6201-midterm/about.html">About</a></li>
@@ -41,13 +47,17 @@
             </nav>
 
         </header>
-        <main>
+        <main id="main" role="main">
+            <!-- FAQ Main Section -->
             <section class="faq-main">
-                <h1>FAQ</h1>
+                <h1 role="heading">FAQ</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione atque sunt deleniti commodi perspiciatis veniam tenetur at corporis, facilis fuga quibusdam consequatur, enim iusto dolor neque aut hic animi reiciendis?</p>
             </section>
             <div class="faq-flex">
+                <!-- FAQ Questions Section -->
             <section class="faq">
+                <h2>Frequent Questions</h2>
+
                 <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
 
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur molestiae ea impedit neque itaque, aspernatur libero nihil labore laudantium dolores quae porro voluptate commodi aliquam asperiores minima suscipit, iste eligendi?</p>
@@ -68,39 +78,33 @@
                 
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur molestiae ea impedit neque itaque, aspernatur libero nihil labore laudantium dolores quae porro voluptate commodi aliquam asperiores minima suscipit, iste eligendi?</p>
             </section>
+            <!-- Contact Info -->
             <section class="contact">
                 <h2>Contact Us</h2>
-                <dl>
-                    <dt>Address</dt>
-                    <dd>123 VpnLane, Ottawa ON K2J 9T5</dd>
-
-                    <dt>Phone Number</dt>
-                    <dd>613-000-0000</dd>
-
-                    <dt>Email</dt>
-                    <dd>LaslesVPN@email.com</dd>
-
-                    <dt>Business Hours</dt>
-                    <dd>Monday-Friday 9am-5pm</dd>
-                </dl>
+                <ul itemscope itemtype="https://schema.org/OnlineBusiness">
+                    <li itemprop="name">LaslesVPN</li>
+                    <li itemprop="telephone">613-000-0000</li>
+                    <li itemprop="email">LaslesVPN@email.com</li>
+                </ul>
                 <button class="btn-round">Contact Us</button>
             </section>
             </div>
         </main>
         </div>
-        <footer>
+        <!-- Footer -->
+        <footer role="contentinfo">
             <div class="foot">
                 <div>
                     <div class="icon">
-                        <p><img src="images/logo.svg" alt="">Lasles<strong>VPN</strong></p>
+                        <p><img src="images/logo.svg" alt="LaslesVPN logo">Lasles<strong>VPN</strong></p>
                     </div>
                     <p>Lasles<strong>VPN</strong> is a private virtual network that has unique features and has high
                         security.
                     </p>
                     <div class="social">
-                        <img src="images/facebook.svg" alt="">
-                        <img src="images/twitter.svg" alt="">
-                        <img src="images/instagram.svg" alt="">
+                        <img src="images/facebook.svg" alt="Facebook">
+                        <img src="images/twitter.svg" alt="Twitter">
+                        <img src="images/instagram.svg" alt="Instagram">
                     </div>
                     <p class="copyright">©2020Lasles<strong>VPN</strong></p>
                 </div>
@@ -133,6 +137,7 @@
                         <li><a href="#">Become Partner</a></li>
                     </ul>
                 </div>
+                <a href="#top">Back to Top</a>
             </div>
 
         </footer>

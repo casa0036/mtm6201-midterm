@@ -1,7 +1,7 @@
   /* CSS General Styling */
   html {
     font-family: "Rubik", sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     color: #4F5665;
     box-sizing: border-box;
   }
@@ -25,12 +25,33 @@
   }
 
   h1 {
-    font-size: 35px;
-    padding: 50px 10px 30px 10px;
+    font-size: 2.188rem;
     margin: 0;
     color: #0B132A;
     font-weight: 500;
     text-align: center;
+  }
+
+  h2 {
+    color: #0B132A;
+  }
+
+  .skip-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .skip-links a{
+    position: absolute;
+    top: -3em;
+    background-color: black;
+    color:white;
+    padding: .5em 1em;
+    font-weight: bold;
+  }
+
+  .skip-links a:focus{
+    top: 0;
   }
 
   a,
@@ -41,8 +62,9 @@
 
   a:hover,
   a:focus {
-    color: #F53838;
+    color: #E8082c;
   }
+
 
   .svg-icons {
     width: 100%;
@@ -55,26 +77,34 @@
   }
 
   .btn-sq {
-    background-color: #F53838;
+    background-color: #eb0a0a;
     color: #fff;
     border: none;
-    padding: 10px 35px 10px 35px;
+    padding: 0.625em 2.188em 0.625em  2.188em;
     border-radius: 5px;
     font-weight: bold;
     box-shadow: 0 10px 20px 0 rgba(245, 56, 56, 0.35);
   }
 
+  .btn-sq:hover {
+    background-color: #FFF;
+    color: #eb0a0a;
+    border: 1px #eb0a0a solid;
+  }
+
   .btn-round {
-    color: #F53855;
+    color: #E8082c;
+    font-weight: bold;
     background-color: #fff;
-    border:  1.5px #F53855 solid;
+    border:  1.5px #E8082c solid;
     border-radius: 40px;
-    padding: 10px 35px 10px 35px;
+    padding: 0.625em 2.188em 0.625em 2.188em;
+    transition: all .5s ease;
   }
 
   .btn-round:hover {
     color: #fff ;
-    background-color: #F53855;
+    background-color: #E8082c;
     box-shadow: 0 6px 20px 0 rgba(245, 56, 56, 0.35);
   }
 
@@ -113,6 +143,7 @@
   .nav-bar a:focus,
   .nav-bar a.current {
     color: #F53838;
+    border: 1px #F53838 solid;
   }
 
   .icon {
@@ -121,70 +152,85 @@
   }
 
   .icon img {
-    padding-right: 10px;
+    padding-right: 0.625em;
   }
 
   .icon p {
     color: #0B132A;
-    font-size: 20px;
+    font-size: 1.25em;
   }
 
   /* hero banner styling */
 
   .hero-banner{
     text-align: center;
-    padding-top: 50px;
+  }
+
+  .hero-banner h1 {
+    padding-bottom: 0.6em;
+    padding-top: 1.5em;
   }
 
   .hero-banner p {
     margin: 0; 
-    padding-bottom: 30px;
+    padding-bottom: 1.875em;
   }
 
   .hero-img {
-    padding-top: 25px;
+    padding-top: 4em;
   }
 
   /* Aside styling */
 
   .numbers-main {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 1.875em;
   }
 
   .numbers-img {
-    padding-top: 30px;
+    padding-top: 1.875em;
     width: 20%;
+    transition: transform 1s;
+  }
+
+  .numbers-img:hover {
+    transform: scale(1.5);
   }
 
   .numbers {
-    font-size: 16px;
+    font-size: 1em;
     margin: 0;
   }
 
-  .numbers h3, 
-  .numbers p{
+  .big-num {
+    color: #0B132A;
+    font-size: 1.5625rem;
+    font-weight: 700;
+  }
+
+ 
+  .numbers p {
     margin: 0;
-    padding-left: 10px;
+    padding-left: 0.625em;
   }
 
   /* Features styling */
 
   .features {
-    padding-top: 50px;
+    padding-top: 3.125em;
   }
 
   .features li img {
-    padding-right: 9px;
+    padding-right: 0.563em;
   }
 
   .features-img {
-    padding-top: 40px;
+    padding-top: 2.5em;
   }
 
   .features h2 {
-    font-size: 25px;
-    padding: 35px 0 15px 0;
+    font-size: 1.563em;
+    padding: 2.188em 0 0.938em 0;
   }
 
   .features h2,
@@ -204,8 +250,8 @@
   }
 
   .plan h2 {
-    font-size: 25px;
-    padding-top: 50px;
+    font-size: 1.563em;
+    padding-top: 3.125em;
   }
 
   .plan h2, 
@@ -219,14 +265,14 @@
   .card {
     border: 2px solid #DDD;
     border-radius: 10px;
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 1.25em;
+    margin-top: 0.625em;
+    margin-bottom: 0.625em;
   }
 
   .card h3 {
-    font-size: 20px;
-    padding-bottom: 15px;
+    font-size: 1.25em;
+    padding-bottom: 0.938em;
   }
 
   .card li {
@@ -240,10 +286,10 @@
 
   .card-price {
     color: #0B132A;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: bold;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 0.938em;
+    padding-bottom: 0.938em;
   }
 
   .vpn h2,
@@ -253,16 +299,16 @@
   }
 
   .vpn h2 {
-    font-size: 25px;
-    padding-top: 50px;
+    font-size: 1.563em;
+    padding-top: 3.125em;
   }
 
   .vpn p {
-    padding-bottom: 45px ;
+    padding-bottom: 2.813em;
   }
 
   .vpn img {
-    padding-bottom: 20px;
+    padding-bottom: 1.25em;
   }
 
   /* logos grid style */
@@ -272,22 +318,29 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     align-items: stretch;
-    padding: 0 15PX 0 15px;
+    padding: 0 0.938em 0 0.938em;
   }
 
 /* review section styling */
 
   .reviews {
     text-align: center;
+    padding-top: 4em;
   }
 
-  .reviews h2,
+
   .reviews p {
     margin: 0;
+  } 
+
+  .card-name {
+    padding-bottom: 0.6em;
   }
 
-  .reviews h2 {
-    font-size: 25px;
+  .reviews .user-name {
+    color: #0B132A;
+    font-size: 1.125rem;
+    font-weight: 500;
   }
 
   .review-cards {
@@ -298,29 +351,27 @@
   .review-card {
     border: 2px solid #DDD;
     border-radius: 10px;
-    padding: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding: 1.25em;
+    margin-top: 0.625em;
+    margin-bottom: 0.625em;
   }
 
-  .review-card h4 {
+  .review-card .user-name {
     color: #0B132A;
     margin: 0;
   }
 
   .fa-solid {
-    font-size: 30px;
-    padding: 9px 9px 9px 9px ;
+    font-size: 1.875em;
+    padding: 0.563em 0.563em 0.563em 0.563em  ;
     color: #F53838;
     background-color: #FFF;
     border: 2px #F53855 solid;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
   }
 
   .fa-solid:hover {
-    background-color: #F53838;
+    background-color: #F53838;;
     color: #FFF;
   }
 
@@ -333,26 +384,28 @@
   .suscribe {
     text-align: center;
     background-color: #FFF;
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
   
   .suscribe h2 {
-    font-size: 25px;
+    font-size: 1.563em;
   }
 
   /* footer styling */
 
   .foot {
     text-align: center;
-    padding-top: 45px;
-    background-color: #F8F8F8;
+    padding-top: 2.813em;
+    background-color: #f5f5f5;
   }
 
   .foot p:nth-child(2) {
-    padding: 15px;
+    padding: 0.938em;
   }
 
   .copyright {
-    color: #AFB5C0;
+    color: #666e7f;
   }
 
   .social {
@@ -364,7 +417,7 @@
   }
 
   .foot li {
-    padding-bottom: 10px;
+    padding-bottom: 0.625em;
   }
 
   .foot li:first-child {
@@ -376,7 +429,19 @@
 
   /* about section styling */
 
+  .about h1 {
+    padding-top: 1em;
+  }
+
   .about p {
+    text-align: center;
+  }
+
+  .about img {
+    padding-bottom: 2.5em;
+  }
+
+  .objectives h2 {
     text-align: center;
   }
 
@@ -392,18 +457,19 @@
   .card-one p,
   .card-two p,
   .card-three p {
-    padding-bottom: 15px;
+    padding-bottom: 0.938em;
   }
 
   /* help page styling */
   /*FAQ styling  */
+
   .faq-main h1 {
-    padding-bottom: 14px;
+    padding-bottom: 0.875em;
   }
 
   .faq-main p {
     margin: 0;
-    padding-bottom: 15px;
+    padding-bottom: 0.938em;
     border-bottom: 2px #F53838 solid;
   }
 
@@ -418,20 +484,21 @@
     margin-bottom: 0;
   }
 
-  .contact dd {
+  .contact ul {
     margin: 0;
+    padding: 0;
+    padding-bottom: 1em;
   }
 
-  .contact dt {
-    font-weight: bold;
-    color: #F53838;
-    padding-bottom: 5px;
-    padding-top: 10px;
+  .contact li {
+    color: #0B132A;
+    padding-bottom: 0.313em;
+    padding-top: 0.625em;
   }
 
   .contact {
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 1.875em;
+    padding-top: 1.875em;
   }
 
 
@@ -441,8 +508,8 @@
 @media screen and (min-width:1024px) {
 
   .btn-sq {
-    width: 250px;
-    height: 50px;
+    width: 15.625em;
+    height: 3.125em;
   }
 
   /* nav bar styling */
@@ -459,7 +526,7 @@
 
   .nav-bar li {
     display: inline-block;
-    padding: 5px;
+    padding: 0.313em;
 
   }
 
@@ -468,29 +535,29 @@
   }
 
   .sign-up-link {
-    /* padding: 50px; */
+    padding: 3.125em;
   }
 
   /* hero banner styling */
 
   .hero-banner {
     display: flex;
-    padding-top: 35px;
-    padding-bottom: 80px;
+    padding-top: 2.188em;
+    padding-bottom: 5em;
     text-align: justify;
     align-items: center;
   }
 
   h1 {
-    font-size: 50px;
+    font-size: 3.125em;
     color: #0B132A;
-    padding: 0 42px 30px 0;
-    text-align: justify;
+    padding: 0 2.625em 1.875em 0;
+    text-align: left;
   }
 
   .hero-banner p {
-    padding-right: 42px;
-    margin-bottom: 30px;
+    padding-right: 2.625em;
+    margin-bottom: 1.875em;
   }
 
   /* Numbers styling */
@@ -498,7 +565,7 @@
   .numbers-main {
     display: flex;
     justify-content: space-evenly;
-    padding: 50px;
+    padding: 3.125em;
     box-shadow: 8px 10px 10px 0 rgba(0, 0, 0, 0.06);
     border-radius: 10px;
   }
@@ -506,16 +573,16 @@
   .number-block {
     display: flex;
     align-items: center;
-    padding: 12px 71px 12px 71px;
+    padding: 0.75em 4.438em 0.75em 4.438em;
   }
 
   .text-block {
-    margin-left: 20px;
+    margin-left: 1.25em;
     text-align: justify;
   }
 
   .text-block h3 {
-    font-size: 25px;
+    font-size: 1.563em;
   }
 
   .mid-lines {
@@ -525,8 +592,8 @@
 
   .numbers-img {
     padding-top: 0;
-    width: 55px;
-    height: 55px;
+    width: 3.438em;
+    height: 3.438em;
   }
 
   /* feature styles */
@@ -534,8 +601,8 @@
   .features {
     display: flex;
     align-items: flex-end;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 6.25em;
+    padding-bottom: 6.25em;
 
   }
 
@@ -545,29 +612,29 @@
   }
 
   .features h2 {
-    font-size: 35px;
+    font-size: 2.188em;
     color: #0B132A;
   }
 
   .features-text {
-    padding-left: 200px;
+    padding-left: 12.5em;
   }
 
   .features-text li {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0.625em;
+    padding-bottom: 0.625em;
   }
 
   /*  plan section styling */
 
   .plan h2 {
-    font-size: 35px;
+    font-size: 2.188em;
     color: #0B132A;
-    padding-bottom: 25px;
+    padding-bottom: 1.563em;
   }
 
   .plan-text {
-    padding-bottom: 70px;
+    padding-bottom: 4.375em;
   }
 
   .card-price {
@@ -577,29 +644,29 @@
   .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+    grid-gap: 3.125em;
     align-items: stretch;
   }
 
   .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 
   .card h3 {
-    padding-top: 40px;
-    padding-bottom: 10px;
+    padding-top: 2.5em;
+    padding-bottom: 0.625em;
   }
 
   .card li {
-    padding: 10px;
-    font-size: 14px;
+    padding: 0.625em;
+    font-size: 0.875em;
   }
 
   .card-price {
-    padding-top: 40px;
+    padding-top: 2.5em;
     
   }
 
@@ -608,11 +675,11 @@
   .vpn h2 {
     color: #0B132A;
     text-align: center;
-    font-size: 35px;
+    font-size: 2.188em;
   }
 
   .vpn p {
-    padding-bottom: 100px;
+    padding-bottom: 6.25em;
   }
 
 /* Svg-syling logos */
@@ -626,16 +693,16 @@
 
 /* Customer review styling */
 
-.reviews h2 {
-  color: #0B132A;
-  text-align: center;
-  font-size: 35px;
-  padding-top: 100px;
-  padding-bottom: 10px;
+.reviews {
+  margin-bottom: 10em;
 }
 
-.reviews p {
-  padding-bottom: 50px;
+.reviews .user-name {
+  text-align: center;
+}
+
+.card-name {
+  padding-bottom: 3.125em;
 }
 /* card styling */
 
@@ -650,6 +717,7 @@
 .review-card {
 display: flex;
 flex-wrap: wrap;
+align-content: flex-start;
 }
 
 .small-body {
@@ -657,11 +725,12 @@ align-self: left;
 }
 
 .card-name {
-  padding-left: 15px;
+  padding-left: 1em;
+  padding-bottom: 0.6em;
 }
 
 .rating {
-  padding-left: 80px;
+  padding-left: 5em;
 }
 
 .star {
@@ -670,36 +739,34 @@ align-self: left;
 
 .arrows {
   text-align: right;
-  padding-top: 25px;
+  padding-top: 1.563em;
 }
 
 .fa-solid {
-  font-size: 25px;
+  font-size: 1.563em;
   text-align: center;
-  padding: 10px 10px 10px 10px;
-  width: 50px;
-  height: 50px;
+  padding: 0.625em 0.625em 0.625em 0.625em;
 }
 
 /* suscribe styling */
 
 .suscribe {
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 5em;
+  margin-right: 5em;
   text-align: justify;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 45px;
+  margin: 2.813em;
   box-shadow: 8px 10px 10px 0 rgba(0, 0, 0, 0.06);
   border-radius: 10px;
-  padding: 25px;
+  padding: 1.563em;
 
 }
 
 .suscribe h2 {
   color: #0B132A;
-  font-size: 35px;
+  font-size: 2.188em;
   margin-bottom: 0;
 }
 
@@ -712,7 +779,7 @@ align-self: left;
 }
 
 .icon {
-  padding-bottom: 20px;
+  padding-bottom: 1.25em;
 }
 
 .icon p {
@@ -722,60 +789,72 @@ align-self: left;
 /* about.html styling for desktop */
 
 .about {
-  padding-top: 50px;
+  padding-top: 3.125em;
   display: flex;
-   padding-bottom: 80px;
+  padding-bottom: 0.938em;
 }
 
 .about h1 {
-  padding-bottom: 15px;
+  padding-bottom: 0.938em;
 }
 
 .about p {
   text-align: justify;
   margin: 0;
-  padding-bottom: 15px;
-  padding-right: 150px;
+  padding-bottom: 0.938em;
+  padding-right: 9.375em;
 }
 
 /* objectives styling */
 
 .objectives {
-  padding-bottom: 95px;
+  padding-bottom: 5.938em;
+}
+
+.objectives h2 {
+    font-size:  2.188em;
 }
 
 .card-one h3,
 .card-two h3,
 .card-three h3 {
-    padding-top: 5px;
+    padding-top: 0.313em;
   }
 
 .card-one p,
 .card-two p,
 .card-three p {
-  padding-top: 25px;
-  padding-bottom: 45px;
+  padding-top: 1.563em;
+  padding-bottom: 2.813em;
 }
 
 .vpn-about p {
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 9.375em;
+  padding-right: 9.375em;
 }
 
 /* help page desktop styling */
 
 .faq-main {
-  padding-bottom: 70px;
+  padding-bottom: 4.375em;
+}
+
+.faq-main p {
+  margin-right: 25em;
 }
 
 .faq h3 {
 margin: 0;
-padding-bottom: 20px;
+padding-bottom: 1.25em;
+}
+
+.faq {
+  margin-bottom: 5em;
 }
 
 .faq p {
-  padding-right: 100px;
-  padding-bottom: 15px;
+  padding-right: 6.25em;
+  padding-bottom: 0.938em;
   margin: 0;
 }
 
@@ -791,19 +870,6 @@ padding-bottom: 20px;
 .contact h2 {
   margin: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
 

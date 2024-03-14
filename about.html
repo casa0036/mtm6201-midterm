@@ -18,14 +18,20 @@
 
 <body>
     <!--Adds all content in container-->
-    <div class="container">
-        <header>
-            <nav>
+    <div class="container" id="top">
+        <!-- Skip links -->
+        <ul class="skip-links">
+            <li><a href="#nav">Skip to main nav</a></li>
+            <li><a href="#main">Skip to main content</a></li>
+          </ul>
+        <header role="banner">
+            <!-- Navigation -->
+            <nav id="nav" role="navigation">
                 <div class="nav-bar">
                     <div class="icon">
                         <!-- creating a class for icon to style -->
-                        <a href="/mtm6201-midterm/index.html">
-                            <p><img src="images/logo.svg" alt="">Lasles<strong>VPN</strong></p>
+                        <a href="/mtm6201-midterm/index.html" aria-label="Homepage">
+                            <p><img src="images/logo.svg" alt="LaslesVPN logo">Lasles<strong>VPN</strong></p>
                         </a>
                     </div>
                     <ul>
@@ -43,10 +49,11 @@
             </nav>
         </header>
 
-        <main>
+        <main id="main" role="main">
+            <!-- About Section -->
             <section class="about">
                 <div>
-                    <h1>About LaslesVPN</h1>
+                    <h1 role="heading">About LaslesVPN</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat est perspiciatis blanditiis
                         tempore nobis ipsum non fugit dolor officia voluptates, iste veritatis asperiores optio
                         suscipit, at, sunt error dignissimos neque!</p>
@@ -58,57 +65,61 @@
 
                     <source srcset="images/feature-img-272_x_221.png" media="(max-width:768px)">
 
-                    <img class="features-img" src="images/feature-img.png" alt="">
+                    <img class="features-img" src="images/feature-img.png" alt="Graphic of women on Laptop">
                 </picture>
             </section>
+            <!-- Objectives Section -->
             <section class="objectives">
+                <h2>Our Objectives </h2>
                 <div class="cards">
                     <div class="card card-one">
                         <h3>Our Mission</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam asperiores dolor dolorem
                             quibusdam velit maiores quisquam iure vitae minima consequatur voluptates voluptatem fugiat
                             numquam nemo molestiae, suscipit adipisci quo commodi!</p>
-                        <button class="btn-sq">Learn more</button>
+                        <button class="btn-sq" role="button">Learn more</button>
                     </div>
                     <div class="card card-two">
                         <h3>Our Values</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam asperiores dolor dolorem
                             quibusdam velit maiores quisquam iure vitae minima consequatur voluptates voluptatem fugiat
                             numquam nemo molestiae, suscipit adipisci quo commodi!</p>
-                        <button class="btn-sq">Learn more</button>
+                        <button class="btn-sq" role="button">Learn more</button>
                     </div>
                     <div class="card card-three">
                         <h3>Our Goals</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam asperiores dolor dolorem
                             quibusdam velit maiores quisquam iure vitae minima consequatur voluptates voluptatem fugiat
                             numquam nemo molestiae, suscipit adipisci quo commodi!</p>
-                        <button class="btn-sq">Learn more</button>
+                        <button class="btn-sq" role="button">Learn more</button>
                     </div>
                 </div>
             </section>
-            <aside class="numbers-main">
+            <!-- LaslesVPN Numbers Section -->
+            <aside class="numbers-main" role="complementary">
                 <div class="number-block">
-                    <img class="svg-icons numbers-img" src="images/user.svg" alt="">
-                    <div class="text-block">
-                        <h3 class="numbers servers">90+</h3>
+                    <img class="svg-icons numbers-img" src="images/user.svg" alt="User icon" aria-details="userinfo">
+                    <div class="text-block" id="userinfo">
+                        <p class="numbers servers big-num">90+</p>
                         <p class="numbers servers">Users</p>
                     </div>
                 </div>
                 <div class="number-block mid-lines">
-                    <img class="svg-icons numbers-img" src="images/location.svg" alt="">
-                    <div class="text-block">
-                        <h3 class="numbers location">30+</h3>
+                    <img class="svg-icons numbers-img" src="images/location.svg" alt="Locations Icon" aria-details="locationsinfo">
+                    <div class="text-block" id="locationsinfo">
+                        <p class="numbers location big-num">30+</p>
                         <p class="numbers location">Locations</p>
                     </div>
                 </div>
                 <div class="number-block">
-                    <img class="svg-icons numbers-img" src="images/Server.svg" alt="">
-                    <div class="text-block">
-                        <h3 class="numbers users">50+</h3>
+                    <img class="svg-icons numbers-img" src="images/Server.svg" alt="Server icon" aria-details="serverinfo">
+                    <div class="text-block" id="serverinfo">
+                        <p class="numbers users">50+</p>
                         <p class="numbers users">Servers</p>
                     </div>
                 </div>
             </aside>
+            <!-- Locations Section -->
             <section>
                 <div class="vpn vpn-about">
                     <h2>Our Locations</h2>
@@ -121,33 +132,34 @@
 
                         <source srcset="images/huge-global-272_x_137.png" media="(max-width:768px)">
 
-                        <img src="images/huge-global.png" alt="">
+                        <img src="images/huge-global.png" alt="Global map with all LaslesVPN locations">
                     </picture>
 
                 </div>
                 <div class="svg-icons logos">
-                    <img class="svg-icons netflix" src="images/netflix.svg" alt="">
-                    <img class="svg-icons reddit" src="images/reddit.svg" alt="">
-                    <img class="svg-icons amazon" src="images/amazon.svg" alt="">
-                    <img class="svg-icons discord" src="images/discord.svg" alt="">
-                    <img class="svg-icons spotify" src="images/spotify.svg" alt="">
+                    <img class="svg-icons netflix" src="images/netflix.svg" alt="netflix">
+                    <img class="svg-icons reddit" src="images/reddit.svg" alt="reddit">
+                    <img class="svg-icons amazon" src="images/amazon.svg" alt="amazon">
+                    <img class="svg-icons discord" src="images/discord.svg" alt="Discord">
+                    <img class="svg-icons spotify" src="images/spotify.svg" alt="Spotify">
                 </div>
             </section>
         </main>
     </div>
-    <footer>
+    <!-- Footer -->
+    <footer role="contentinfo">
         <div class="foot">
             <div>
                 <div class="icon">
-                    <p><img src="images/logo.svg" alt="">Lasles<strong>VPN</strong></p>
+                    <p><img src="images/logo.svg" alt="LaslesVPN logo">Lasles<strong>VPN</strong></p>
                 </div>
                 <p>Lasles<strong>VPN</strong> is a private virtual network that has unique features and has high
                     security.
                 </p>
                 <div class="social">
-                    <img src="images/facebook.svg" alt="">
-                    <img src="images/twitter.svg" alt="">
-                    <img src="images/instagram.svg" alt="">
+                    <img src="images/facebook.svg" alt="Facebook">
+                    <img src="images/twitter.svg" alt="Twitter">
+                    <img src="images/instagram.svg" alt="Instagram">
                 </div>
                 <p class="copyright">©2020Lasles<strong>VPN</strong></p>
             </div>
@@ -180,6 +192,8 @@
                     <li><a href="#">Become Partner</a></li>
                 </ul>
             </div>
+            <a href="#top">Back to Top</a>
+        </div>
     </footer>
 </body>
 
